@@ -2,6 +2,7 @@
 This repository contains script files for performing...
 
 ## Setup
+These scripts make use of the lastest version of Tensorflow, which requires Python 3.5+
 
 ```bash
 # Clone this repository
