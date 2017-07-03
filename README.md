@@ -5,7 +5,7 @@ Detect planes in Planet imagery using machine learning
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/rhammell/planesnet-detector.git
 
 # Go into the repository
 cd electron-quick-start
