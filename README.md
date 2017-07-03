@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
 ## Model Training
-The repository contains a pre-trained convolutional neural net model saved within the models folder. This model was trained using 
+The repository contains a pre-trained convolutional neural net (CNN) model trained against the planesnet dataset and stored in the models folder.  
 
 ```bash
 # Train the model
