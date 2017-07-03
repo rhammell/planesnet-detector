@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
 ## Model Training
-A pre-trained TFLearn convolutional neural net (CNN) model trained against the planesnet dataset and stored in the `models` folder. The design and parameters of this network can be seen in `model.py`. Retrain or save a new network by running `train.py`.   
+A pre-trained TFLearn convolutional neural net (CNN) model is stored in the `models` folder. The design and parameters of this network can be seen in `model.py`. Retrain or save a new network by running `train.py`.   
 
 ```bash
 # Train the model
