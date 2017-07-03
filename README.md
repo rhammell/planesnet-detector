@@ -3,7 +3,7 @@ Detect planes in Planet imagery using machine learning
 
 ## To Use
 
-'''bash
+```bash
 # Clone this repository
 git clone https://github.com/electron/electron-quick-start
 
@@ -15,4 +15,4 @@ pip install -r requirements.txt
 
 # Run on demo image
 python detector.py "images/scene_1.png"
-'''
+```
