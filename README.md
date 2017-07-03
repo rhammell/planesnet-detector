@@ -1,5 +1,5 @@
 # planesnet-detector
-Detect planes in Planet imagery using machine learning
+This repository contains script files for performing...
 
 ## To Use
 
@@ -8,7 +8,7 @@ Detect planes in Planet imagery using machine learning
 git clone https://github.com/rhammell/planesnet-detector.git
 
 # Go into the repository
-cd electron-quick-start
+cd planesnet-detector
 
 # Install required modules
 pip install -r requirements.txt
