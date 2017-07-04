@@ -9,9 +9,7 @@ With an accurately trained model, this classification process can be extended to
 See an example of the results below. 
 ![input](http://i.imgur.com/2a6E9Nj.png) 
 
-![plane](http://i.imgur.com/SkimtmU.png)
-
-![input](http://i.imgur.com/2a6E9Nj.jpg =250x) 
+![output](http://imgur.com/d50SQA3.png =250x) 
 
 
 
