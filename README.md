@@ -2,7 +2,7 @@
 This repository contains scripts that enable the detection of aircraft in [Planet](https://www.planet.com/) imagery using machine learning techniques. Included are scripts which define a machine learning model, train it using a labeled dataset, and apply it across an entire image scene. 
 
 ## Setup
-These scripts make use of the lastest version of Tensorflow, which requires Python 3.5+
+Python 3.5+ is required for compatability with all required modules
 
 ```bash
 # Clone this repository
