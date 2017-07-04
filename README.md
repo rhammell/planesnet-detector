@@ -26,42 +26,22 @@ cd planesnet-detector
 pip install -r requirements.txt
 ```
 ## Model
+A convolutional neural network (CNN) is defined within the `model.py` module using the (TFLearn)[http://tflearn.org/] library. This model is designed for PlanesNet image dimesional input. 
 
 ## Training
+A copy of the PlanesNet dataset is included as `planesnet.pklz`. For more information on the layout of this dataset, and to get the current version of this file, see the [PlanesNet](https://www.kaggle.com/rhammell/planesnet) documentation. 
 
-## Detector
-
-## Model Training
-The PlanesNet labeled training dataset can be used at input to train machine learning models to classify a single 20x20 pixel image chip as either belonging to a 'plane' or 'no-plane' class. 
-
-The PlanesNet labeled training dataset contains 20x20 pixel image chips labeled as belonging to either a 'plane' or 'no-plane' class, depending on the content of the image chp
-
-PlanesNet is a labeled training dataset consiting of image chips extracted from Planet satellite imagery. It contains thousands of 20x20 pixel RGB images labeled with either a "plane" or "no-plane" classification. Machine learning models can be trained using this data to classify any 20x20 pixel input image as being one of those classes, depending on the input image content. 
-
-The purpose of PlanesNet is to serve as labeled training data to train machine learning algorithms to detect the locations of airplanes in Planet's medium resolution remote sensing imagery.
-
-The dataset includes 24000 20x20 RGB images labeled with either a "plane" or "no-plane" classification. Image chips were derived from PlanetScope full-frame visual scene products, which are orthorectified to a 3 meter pixel size.
-
-A convolutional neural network (CNN) is defined within the `model.py` module using the (TFLearn)[http://tflearn.org/] library. 
-
-Pre-trained model files are stored in the `models` directory. Train the network by running `train.py`.
-
-This model is trained using the [PlanesNet](https://www.kaggle.com/rhammell/planesnet) dataset. This model has acheived an accuracy of >99.5% in classifying the 'plane' and 'no-plane' classes of the dataset.  
-
-
-A TFLearn convulutional neural net (CNN) model designed to work with PlanesNet input is defined within the `model.py` module. Pre-trained model files are stored in the `models` folder. Retrain or save a new network by running `train.py`. 
-
+The defined CNN can be trained by running `train.py`. 
 ```bash
 # Train the model
 python train.py 
 ```
+Outputs the model parameters calculated from training are saved into the `models` directory. Pre-trained model files are made available in this directory already. This trained model has achieved a classification accurary of >99.5% on the PlanesNet dataset. 
 
-## Sliding Window Detector
-Using the trained model files, a sliding window detector function can be 
+## Detector
+Using the trained model files, a sliding window detector function can be run on any input image using `detector.py`. 
 
 ```bash
 # Run on demo image
 python detector.py "images/scene_1.png"
 ```
-
-## Results
