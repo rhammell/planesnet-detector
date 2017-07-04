@@ -7,11 +7,8 @@ This repository contains scripts that enable the detection of aircraft in [Plane
 With an accurately trained model, this classification process can be extended to a full Planet image scene by using a sliding window technique. A 20x20 pixel window is moved across each pixel position in the image, extracted, and classified by the model. Neighboring pixel poistions that are classified as "plane" are then clustered into single detections. These detections are highlighted in an output image by drawing a bounding box around them in an output copy of the original Planet scene. 
 
 See an example of the results below. 
-![input](http://i.imgur.com/2a6E9Nj.png) 
-
-![output]( =250x) 
-
-<img src="http://imgur.com/d50SQA3.png" width="200">
+<img src="http://i.imgur.com/2a6E9Nj.png" width="400">
+<img src="http://imgur.com/d50SQA3.png" width="400">
 
 
 
