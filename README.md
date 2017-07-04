@@ -1,5 +1,7 @@
 # planesnet-detector
-This repository contains scripts that enable the detection of aircraft in [Planet](https://www.planet.com/) imagery using machine learning techniques. Included are scripts which define a machine learning model, train it using a labeled dataset, and apply it across an entire image scene. 
+This repository contains scripts that enable the detection of aircraft in [Planet](https://www.planet.com/) imagery using machine learning techniques. Included are scripts which define a machine learning model, train it using a labeled dataset, and apply it across an entire image scene.
+
+A TFLearn convolutional neural network defined within the `model.py` module. This model is trained using the [PlanesNet](https://www.kaggle.com/rhammell/planesnet) dataset. This model has acheived an accuracy of >99.5% in classifying the 'plane' and 'no-plane' classes of the dataset.  
 
 ## Setup
 Python 3.5+ is required for compatability with all required modules
