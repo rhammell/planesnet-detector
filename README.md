@@ -25,7 +25,6 @@ cd planesnet-detector
 # Install required modules
 pip install -r requirements.txt
 ```
-
 ## Model
 
 ## Training
