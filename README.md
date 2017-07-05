@@ -28,7 +28,7 @@ cd planesnet-detector
 pip install -r requirements.txt
 ```
 ## Model
-A convolutional neural network (CNN) is defined within the `model.py` module using the (TFLearn)[http://tflearn.org/] library. This model is designed for PlanesNet image dimesional input. 
+A convolutional neural network (CNN) is defined within the `model.py` module using the [TFLearn](http://tflearn.org/) library. This model is designed for PlanesNet image input. 
 
 ## Training
 A copy of the PlanesNet dataset is included as `planesnet.pklz`. For more information on the layout of this dataset, and to get the current version of this dataset, see the [PlanesNet](https://www.kaggle.com/rhammell/planesnet) documentation. 
