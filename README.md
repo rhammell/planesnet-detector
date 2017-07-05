@@ -41,7 +41,9 @@ python train.py
 The trained model's parameter files are saved into the `models` directory. Pre-trained model files are made available in this directory already. This trained CNN has achieved a classification accurary of >99.5% on the PlanesNet dataset. 
 
 ## Detector
-Using the trained model files, a sliding window detector function can be run on any full input image using `detector.py` and passing the image path as the first argument. An optional second argument can specify an output .png pathname, or a default pathname will be used. 
+Using the trained model files, a sliding window detector function can be run on any full input image using `detector.py` and passing the image path as the first argument. An optional second argument can specify an output .png pathname, or a default pathname will be used.
+
+Example images are contained in the `images` directory. 
 
 ```bash
 # Run on demo image with default output path
