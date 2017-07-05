@@ -4,7 +4,7 @@ This repository contains scripts that enable the detection of aircraft in [Plane
 ## Methodology
 [PlanesNet](https://www.kaggle.com/rhammell/planesnet) is a labeled training dataset consiting of image chips extracted from Planet satellite imagery. It contains thousands of 20x20 pixel RGB image chips labeled with either a "plane" or "no-plane" classification. Machine learning models can be trained against this data to classify any given input chip into either one of these classes. 
 
-With an accurately trained model, this classification process can be extended to a full Planet image scene by using a sliding window technique. A 20x20 pixel window is moved across each pixel position in the image, extracted, and classified by the model. Neighboring window poistions that are classified as "plane" are then clustered into a single detection. These detections are highlighted in an output image by drawing a bounding box around them in a copy of the original Planet scene. 
+With an accurately trained model, this classification process can be extended to a full Planet image scene by using a sliding window technique. A 20x20 pixel window is moved across each pixel position in the image, extracted, and classified by the model. Neighboring window poistions that are classified as "plane" are then clustered into a single detection. These detections are highlighted with a bounding box in a copy of the original Planet scene.
 
 See an example of the results below. 
 <p>
