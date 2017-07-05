@@ -13,8 +13,6 @@ See an example of the results below.
 </p>
 
 [Additional Results](http://imgur.com/a/z34B3)
-[Additional REsults](https://www.kaggle.com/rhammell/planesnet)
-[PlanesNet](https://www.kaggle.com/rhammell/planesnet)
 
 ## Setup
 Python 3.5+ is required for compatability with all required modules
