@@ -9,7 +9,7 @@ With an accurately trained model, this classification process can be extended to
 See an example of the results below. 
 <p>
 <img src="http://i.imgur.com/2a6E9Nj.png" width="400">
-<img src="http://imgur.com/d50SQA3.png" width="400">
+<img src="http://i.imgur.com/nQCK9Rl.png" width="400">
 </p>
 
 [Additional Results](http://imgur.com/a/z34B3)
