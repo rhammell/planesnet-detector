@@ -8,11 +8,12 @@ import numpy as np
 from tflearn.data_utils import to_categorical
 from model import model
 
+# Load planesnet data
 f = gzip.open('planesnet.pklz', 'rb')
 planesnet = pickle.load(f)
 f.close()
 
-# Preprocess image data for input
+# Preprocess image data and labels for input
 X = planesnet['data'] / 255.
 X = X.reshape([-1,3,20,20]).transpose([0,2,3,1])
 Y = np.array(planesnet['labels'])
