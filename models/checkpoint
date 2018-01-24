@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\rhammell\\desktop\\planesnet-detector\\models\\model.tfl"
+all_model_checkpoint_paths: "C:\\Users\\rhammell\\desktop\\planesnet-detector\\models\\model.tfl"

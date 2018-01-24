@@ -1,5 +1,5 @@
 # planesnet-detector
-This repository contains scripts that enable the detection of aircraft in [Planet](https://www.planet.com/) imagery using machine learning techniques. Included are files which define a machine learning model, train it using the [PlanesNet](https://www.kaggle.com/rhammell/planesnet) dataset, and apply it across an entire image scene to highlight aircraft detections.
+This repository contains scripts that enable the automatic detection of aircraft in [Planet](https://www.planet.com/) imagery using machine learning techniques. Included are files which define a machine learning model, train it using the Planesnet dataset, and apply it across an entire image scene to highlight aircraft detections.
 
 ## Methodology
 [PlanesNet](https://www.kaggle.com/rhammell/planesnet) is a labeled training dataset consiting of image chips extracted from Planet satellite imagery. It contains thousands of 20x20 pixel RGB image chips labeled with either a "plane" or "no-plane" classification. Machine learning models can be trained against this data to classify any given input chip into either one of these classes. 
@@ -8,11 +8,11 @@ With an accurately trained model, this classification process can be extended to
 
 See an example of the results below. 
 <p>
-<img src="http://i.imgur.com/2a6E9Nj.png" width="400">
-<img src="http://i.imgur.com/nQCK9Rl.png" width="400">
+<img src="https://i.imgur.com/imshZn6.png" width="400">
+<img src="https://i.imgur.com/Fbzedgs.png" width="400">
 </p>
 
-[Additional Results](http://imgur.com/a/z34B3)
+[Additional Results](https://imgur.com/a/vYnQw)
 
 ## Setup
 Python 3.5+ is required for compatability with all required modules
@@ -28,15 +28,13 @@ cd planesnet-detector
 pip install -r requirements.txt
 ```
 ## Model
-A convolutional neural network (CNN) is defined within the `model.py` module using the [TFLearn](http://tflearn.org/) library. This model is designed for PlanesNet image input. 
+A convolutional neural network (CNN) is defined within the `model.py` module using the [TFLearn](http://tflearn.org/) library. This model supports the 20x20x3 input dimensions of the Planesnet image data.
 
 ## Training
-A copy of the PlanesNet dataset is included as `planesnet.pklz`. For more information on the layout of this dataset, and to get the current version of this dataset, see the [PlanesNet](https://www.kaggle.com/rhammell/planesnet) documentation. 
-
-The defined CNN can be trained by running `train.py`. 
+The defined CNN can be trained by running `train.py` and passing the path to the JSON version of the Planesnet dataset as the first argument. The latest version of this JSON file is available through the [PlanesNet](https://www.kaggle.com/rhammell/planesnet) Kaggle page, which also has information describing the dataset layout. 
 ```bash
 # Train the model
-python train.py 
+python train.py planesnet.json
 ```
 The trained model's parameter files are saved into the `models` directory. Pre-trained model files are made available in this directory already. This trained CNN has achieved a classification accurary of >99.5% on the PlanesNet dataset. 
 
