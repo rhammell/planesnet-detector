@@ -9,7 +9,7 @@ from tflearn.data_utils import to_categorical
 from model import model
 
 def train(fname):
-    """ Perform a sliding window detector on an image.
+    """ Train and save CNN model on Planesnet dataset
 
     Args:
         fname (str): Path to Planesnet JSON dataset
