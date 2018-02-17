@@ -8,11 +8,12 @@ import numpy as np
 from tflearn.data_utils import to_categorical
 from model import model
 
-def train(fname):
+def train(fname, out_fname):
     """ Train and save CNN model on Planesnet dataset
 
     Args:
-        fname (str): Path to Planesnet JSON dataset
+        fname (str): Path to PlanesNet JSON dataset
+        out_fname (str): Path to output Tensorflow model file (.tfl)
     """
 
     # Load planesnet data
@@ -31,11 +32,11 @@ def train(fname):
               show_metric=True, batch_size=128, run_id='planesnet')
 
     # Save trained model
-    model.save("models/model.tfl")
+    model.save(out_fname)
 
 
 # Main function
 if __name__ == "__main__":
 
     # Train using input file
-    train(sys.argv[1])
+    train(sys.argv[1], sys.argv[2])

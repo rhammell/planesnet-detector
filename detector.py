@@ -10,18 +10,18 @@ from PIL import Image
 from scipy import ndimage
 from model import model
 
-# Load trained model
-model.load('models/model.tfl')
-
-
-def detector(in_fname, out_fname=None):
+def detector(model_fname, in_fname, out_fname=None):
     """ Perform a sliding window detector on an image.
 
     Args:
+        model_fname (str): Path to Tensorflow model file (.tfl)
         in_fname (str): Path to input image file
         out_fname (str): Path to output image file. Default of None.
 
     """
+
+    # Load trained model
+    model.load(model_fname)
 
     # Read input image data
     im = Image.open(in_fname)
@@ -83,7 +83,7 @@ def detector(in_fname, out_fname=None):
 if __name__ == "__main__":
 
     # Run detection function with command line inputs
-    if len(sys.argv) == 2:
-        detector(sys.argv[1])
-    else:
+    if len(sys.argv) == 3:
         detector(sys.argv[1], sys.argv[2])
+    else:
+        detector(sys.argv[1], sys.argv[2], sys.argv[3])

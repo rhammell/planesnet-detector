@@ -1,4 +1,5 @@
-planesnet.json
+*.json
 *.pyc
 
+models/
 images/*_detection.png

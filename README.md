@@ -27,26 +27,29 @@ cd planesnet-detector
 # Install required modules
 pip install -r requirements.txt
 ```
+
 ## Model
-A convolutional neural network (CNN) is defined within the `model.py` module using the [TFLearn](http://tflearn.org/) library. This model supports the 20x20x3 input dimensions of the Planesnet image data.
+A convolutional neural network (CNN) is defined within the `model.py` module using the [TFLearn](http://tflearn.org/) library. This model supports the 20x20x3 input dimensions of the PlanesNet image data.
 
 ## Training
-The defined CNN can be trained by running `train.py` and passing the path to the JSON version of the Planesnet dataset as the first argument. The latest version of this JSON file is available through the [PlanesNet](https://www.kaggle.com/rhammell/planesnet) Kaggle page, which also has information describing the dataset layout. 
+The defined CNN can be trained with the JSON version of the PlanesNet dataset and saved to a Tensorflow .tfl file for later use. Train the model by running `train.py` and passing the path to `planesnet.json` and the path to the output .tfl file as arguments.
+
 ```bash
 # Train the model
-python train.py planesnet.json
+mkdir models
+python train.py "planesnet.json" "models/model.tfl"
 ```
-The trained model's parameter files are saved into the `models` directory. Pre-trained model files are made available in this directory already. This trained CNN has achieved a classification accurary of >99.5% on the PlanesNet dataset. 
+
+The latest version of `planesnet.json` is available through the [PlanesNet](https://www.kaggle.com/rhammell/planesnet) Kaggle page, which has further information describing the dataset layout. 
 
 ## Detector
-Using the trained model files, a sliding window detector function can be run on any full input image using `detector.py` and passing the image path as the first argument. An optional second argument can specify an output .png pathname, or a default pathname will be used.
+A trained model can be applied across entire images using the sliding window detector function `detector.py`, which takes the model file path, input image path, and optional output image path as arguments. The output image will cluster positive detections and draw a bounding box around their center point. 
 
 Example images are contained in the `images` directory. 
-
 ```bash
 # Run on demo image with default output path
-python detector.py "images/scene_1.png"
+python detector.py "models/model.tfl" "images/scene_1.png"
 
 # Run on demo image with defined output path
-python detector.py "image/scene_1.png" "image/scene_1_detections.png"
+python detector.py "models/model.tfl" "image/scene_1.png" "image/scene_1_detections.png"
 ```
