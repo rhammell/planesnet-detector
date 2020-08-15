@@ -7,9 +7,9 @@ This repository contains scripts that enable the automatic detection of aircraft
 With an accurately trained model, this classification process can be extended to a full Planet image scene by using a sliding window technique. A 20x20 pixel window is moved across each pixel position in the image, extracted, and classified by the model. Neighboring window poistions that are classified as "plane" are then clustered into a single detection. These detections are highlighted with a bounding box in a copy of the original Planet scene.
 
 See an example of the results below. 
-<p>
-<img src="https://i.imgur.com/imshZn6.png" width="400">
-<img src="https://i.imgur.com/Fbzedgs.png" width="400">
+<p align="center">
+<img src="img/input.jpg" width="400">
+<img src="img/detections.jpg" width="400">
 </p>
 
 [Additional Results](https://imgur.com/a/vYnQw)
@@ -45,11 +45,11 @@ The latest version of `planesnet.json` is available through the [PlanesNet](http
 ## Detector
 A trained model can be applied across entire images using the sliding window detector function `detector.py`, which takes the model file path, input image path, and optional output image path as arguments. The output image will cluster positive detections and draw a bounding box around their center point. 
 
-Example images are contained in the `images` directory. 
+Example images are contained in the `scenes` directory. 
 ```bash
 # Run on demo image with default output path
-python detector.py "models/model.tfl" "images/scene_1.png"
+python detector.py "models/model.tfl" "scenes/scene_1.png"
 
 # Run on demo image with defined output path
-python detector.py "models/model.tfl" "image/scene_1.png" "image/scene_1_detections.png"
+python detector.py "models/model.tfl" "scenes/scene_1.png" "scenes/scene_1_detections.png"
 ```
